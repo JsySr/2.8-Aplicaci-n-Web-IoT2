@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea los elementos en la parte superior */
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #eaeaea;
+}
+
+.input-wrapper {
+    position: absolute;
+    top: 25px; /* Ajusta la distancia desde la parte superior */
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 220px;
+    font-size: 16px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 110px; /* Deja espacio entre el input y la cruzeta */
+}
+
+.control-button {
+    width: 90px;
+    height: 90px;
+    font-size: 22px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.control-button:hover {
+    background-color: #218838;
+}
+
+button#pause {
+    background-color: #ff0000;
+}
+
+button#pause:hover {
+    background-color: #b30000;
+}

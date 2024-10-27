@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control del Vehículo IoT</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/Styles.css') }}">
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .input-wrapper {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .input-wrapper label {
+            font-size: 1.1rem;
+            margin-right: 8px;
+        }
+
+        .input-wrapper input {
+            padding: 8px;
+            border: 2px solid #bbb;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(3, 75px);
+            grid-template-rows: repeat(3, 75px);
+            gap: 8px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .controls button {
+            width: 75px;
+            height: 75px;
+            background-color: #28a745;
+            border: none;
+            color: white;
+            font-size: 1.4rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .controls button:hover {
+            background-color: #218838;
+        }
+
+        #pause {
+            background-color: #ff073a;
+        }
+
+        #pause:hover {
+            background-color: #e3062d;
+        }
+
+        @media (max-width: 600px) {
+            .controls {
+                grid-template-columns: repeat(3, 55px);
+                grid-template-rows: repeat(3, 55px);
+            }
+
+            .controls button {
+                width: 55px;
+                height: 55px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="input-wrapper">
+        <label for="username">Introduce tu nombre:</label>
+        <input type="text" id="username" placeholder="Ingresa tu nombre">
+    </div>
+
+    <div class="controls">
+        <button id="move-up-left">1</button>
+        <button id="move-up">2</button>
+        <button id="move-up-right">3</button>
+        <button id="move-left">4</button>
+        <button id="pause">5</button>
+        <button id="move-right">6</button>
+        <button id="move-down-left">7</button>
+        <button id="move-down">8</button>
+        <button id="move-down-right">9</button>
+    </div>
+    
+    <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha256.js"></script>
+
+</body>
+</html>
